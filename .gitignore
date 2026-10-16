@@ -1,2 +1,6 @@
-# Datos de entrada locales; el repositorio distribuye solo código y resultados.
+# Datos de entrada locales; se conservan en el equipo, no se publican.
 /datos/
+
+# Tablas y reportes intermedios/finales locales (se suben solo gráficos y ClueGO).
+/resultados/DEGs/
+/resultados/control_calidad/
