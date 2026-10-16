@@ -1,0 +1,5 @@
+Function	Groups	Group Genes
+oxygen transport	Group0	LOC106607371|LOC106607373
+positive regulation of triglyceride catabolic process	Group3	LOC106576157
+protein import into mitochondrial inner membrane	Group2	LOC106602140
+somatostatin signaling pathway	Group1	LOC106601468

@@ -1,0 +1,100 @@
+Selection Citeria:
+Statistical Test Used = Enrichment/Depletion (Two-sided hypergeometric test)
+Correction Method Used = Bonferroni step down
+Min GO Level = 3
+Max GO Level = 8
+Cluster #1
+Sample File Name = File selection: ManuallyAddedOrModifiedIDs
+Number of Genes = 1
+Min Percentage = 4.0
+
+GO Fusion = true
+GO Group = true
+Kappa Score Threshold = 0.4
+Over View Term = SmallestPValue
+Group By Kappa Statistics = true
+Initial Group Size = 1
+Sharing Group Percentage = 50.0
+
+ClueGO Log:
+### All results were created with ClueGO v2.5.10 ###
+Organism analyzed: Salmo salar [8030]
+Identifier types used: [SymbolID]
+Evidence codes used: [All]
+#Genes in KEGG_06.11.2017 : 13260
+#Genes in GO_BiologicalProcess-EBI-QuickGO-GOA_06.11.2017_00h00 : 22097
+
+#All unique genes in selected ontologies: 26505 (reference set for hypergeometric test)
+
+#Genes from Cluster#1: unique uploaded ids 77 -> corresponding genes 29, with 48 (62.34%) missing  -> 29 recognized by ClueGO.
+ -> To improve the % of found genes, verify gene identifiers, download new available ClueGO conversion files or add/request additional files.
+
+#Genes with functional annotations in all selected Ontologies from Cluster#1: 13 (44.83%) -> 16 (55.17%) are not functionally annotated in any selected Ontology!
+ -> To improve the % of annotated genes, chose additional ontologies.
+
+#Genes from all Clusters associated to 31 representative Terms and Pathways (after applying general selection criteria): 6 (20.69%)
+#Genes from all Clusters associated to 5 representative Terms and Pathways (after fusion selection criteria): 5 (17.24%)
+
+KappaScore Grouping:
+Iteration: 0 with 4 groups
+Final KappaScore groups  = 4
+# Terms not grouped  = 0
+
+# Merge redundant groups with >50.0% overlap
+Final group size after merging: 4
+
+#GO All Terms Specific for Cluster #1: 5
+#GO Terms: 5
+#GO Term Connections: 1
+List of missing Genes -> make sure the ids exists or are written propperly -> if yes make sure you have their annotation in ClueGO!
+Cluster #1
+Gene IDs not found (no annotation or wrong ids) in Cluster#1:
+LOC106568884
+LOC123723718
+LOC123724137
+LOC123724191
+LOC123724660
+LOC123724770
+LOC123724775
+LOC123725002
+LOC123725180
+LOC123725274
+LOC123725565
+LOC123725775
+LOC123725776
+LOC123725794
+LOC123726273
+LOC123726732
+LOC123726787
+LOC123726946
+LOC123726963
+LOC123727405
+LOC123727427
+LOC123727585
+LOC123727929
+LOC123727952
+LOC123728251
+LOC123728252
+LOC123728341
+LOC123728348
+LOC123728982
+LOC123729050
+LOC123729365
+LOC123729739
+LOC123729975
+LOC123732718
+LOC123732865
+LOC123732866
+LOC123738718
+LOC123739093
+LOC123739323
+LOC123739324
+LOC123739890
+LOC123740640
+LOC123742399
+LOC123742642
+LOC123742644
+LOC123743586
+LOC123743827
+tmem269
+

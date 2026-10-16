@@ -1,0 +1,6 @@
+NAME	LOC100136439	LOC106566099	LOC106568234	LOC106575739	LOC106578169	LOC106588307	LOC106589897	LOC106600963	LOC106612563	LOC106613203	gsta3	mgst2
+blood coagulation	0	0	1	1	1	0	1	0	0	0	0	0
+regulation of body fluid levels	0	0	1	1	1	1	1	0	0	1	0	0
+defense response to other organism	1	1	0	0	0	0	0	1	0	0	0	0
+Metabolism of xenobiotics by cytochrome P450	0	0	0	0	0	0	0	0	1	0	1	1
+Drug metabolism	0	0	0	0	0	0	0	0	1	0	1	1

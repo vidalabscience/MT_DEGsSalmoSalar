@@ -1,0 +1,4 @@
+Function	Groups	Group Genes
+Metabolism of xenobiotics by cytochrome P450	Group2	LOC106612563|gsta3|mgst2
+defense response to other organism	Group0	LOC100136439|LOC106566099|LOC106600963
+regulation of body fluid levels	Group1	LOC106568234|LOC106575739|LOC106578169|LOC106588307|LOC106589897|LOC106613203

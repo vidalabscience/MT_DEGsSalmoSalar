@@ -1,0 +1,6 @@
+NAME	blood coagulation	regulation of body fluid levels	defense response to other organism	Metabolism of xenobiotics by cytochrome P450	Drug metabolism
+blood coagulation	1.0	0.6666666666666665	-0.4000000000000001	-0.4000000000000001	-0.4000000000000001
+regulation of body fluid levels	0.6666666666666665	1.0	-0.5	-0.5	-0.5
+defense response to other organism	-0.4000000000000001	-0.5	1.0	-0.3333333333333333	-0.3333333333333333
+Metabolism of xenobiotics by cytochrome P450	-0.4000000000000001	-0.5	-0.3333333333333333	1.0	1.0
+Drug metabolism	-0.4000000000000001	-0.5	-0.3333333333333333	1.0	1.0

@@ -1,0 +1,6 @@
+NAME	LOC106576157	LOC106601468	LOC106602140	LOC106607371	LOC106607373
+positive regulation of triglyceride catabolic process	1	0	0	0	0
+oxygen transport	0	0	0	1	1
+triglyceride catabolic process	1	0	0	0	0
+somatostatin signaling pathway	0	1	0	0	0
+protein import into mitochondrial inner membrane	0	0	1	0	0

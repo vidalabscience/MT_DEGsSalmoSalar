@@ -1,0 +1,6 @@
+NAME	positive regulation of triglyceride catabolic process	oxygen transport	triglyceride catabolic process	somatostatin signaling pathway	protein import into mitochondrial inner membrane
+positive regulation of triglyceride catabolic process	1.0	-0.36363636363636376	1.0	-0.2500000000000007	-0.2500000000000007
+oxygen transport	-0.36363636363636376	1.0	-0.36363636363636376	-0.36363636363636376	-0.36363636363636376
+triglyceride catabolic process	1.0	-0.36363636363636376	1.0	-0.2500000000000007	-0.2500000000000007
+somatostatin signaling pathway	-0.2500000000000007	-0.36363636363636376	-0.2500000000000007	1.0	-0.2500000000000007
+protein import into mitochondrial inner membrane	-0.2500000000000007	-0.36363636363636376	-0.2500000000000007	-0.2500000000000007	1.0
