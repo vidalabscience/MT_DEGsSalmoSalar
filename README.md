@@ -2,6 +2,14 @@
 
 Proyecto de memoria de título de Tomás Cid.
 
+## Alcance dentro del pipeline bioinformático
+
+Este repositorio cubre las etapas **posteriores a la cuantificación** de la expresión génica. Parte de las matrices de conteos generadas previamente con FeatureCounts; no incluye el procesamiento de lecturas crudas, el control de calidad inicial, el recorte de lecturas, el alineamiento ni la cuantificación.
+
+A partir de esas matrices, los scripts realizan el análisis de expresión diferencial con DESeq2 y comparan los conjuntos de genes expresados diferencialmente. Luego, los resultados se utilizan para la interpretación funcional con ClueGO y para generar tablas, gráficos y redes funcionales.
+
+Los informes MultiQC de las etapas previas se conservan como referencia, pero este repositorio no ejecuta esas etapas del pipeline.
+
 ## Organización del repositorio
 
 - `codigo/scripts/`: scripts de análisis en R y el notebook de exploración de sensores.
