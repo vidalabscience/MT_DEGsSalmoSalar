@@ -11,25 +11,18 @@ Este trabajo se realizó con el apoyo de los siguientes proyectos:
 
 ## Alcance dentro del pipeline bioinformático
 
-Este repositorio cubre las etapas **posteriores a la cuantificación** de la expresión génica. Parte de las matrices de conteos generadas previamente con FeatureCounts; no incluye el procesamiento de lecturas crudas, el control de calidad inicial, el recorte de lecturas, el alineamiento ni la cuantificación.
+Este repositorio incluye el código y los resultados de las etapas **posteriores a la cuantificación** de la expresión génica. Las matrices de conteos se deben obtener externamente; no se incluyen datos de entrada ni el procesamiento de lecturas crudas, el control de calidad inicial, el recorte, el alineamiento o la cuantificación.
 
-A partir de esas matrices, los scripts realizan el análisis de expresión diferencial con DESeq2 y comparan los conjuntos de genes expresados diferencialmente. Luego, los resultados se utilizan para la interpretación funcional con ClueGO y para generar tablas, gráficos y redes funcionales.
-
-Los informes MultiQC de las etapas previas se conservan como referencia, pero este repositorio no ejecuta esas etapas del pipeline.
+Los análisis realizan expresión diferencial con DESeq2, comparación de conjuntos de genes e interpretación funcional con ClueGO. Se incluyen tablas, informes MultiQC de referencia, gráficos y redes funcionales; las etapas previas del pipeline no se ejecutan aquí.
 
 ## Organización del repositorio
 
-- `codigo/scripts/`: scripts de análisis en R y el notebook de exploración de sensores.
-- `datos/featurecounts/`: matrices de conteos usadas en el análisis diferencial.
-- `datos/metadatos/`: planillas de nombres y metadatos de archivos.
-- `resultados/DEGs/originales/`: tablas originales de expresión diferencial.
+- `codigo/scripts/`: scripts de análisis en R y notebook de exploración de sensores.
+- `resultados/DEGs/originales/`: resultados DEGs de contrastes previos, reutilizados para calcular las intersecciones.
 - `resultados/DEGs/venn/`: resultados de intersecciones, exclusividad y núcleo regional.
 - `resultados/ClueGO/<región>/`: tablas y matrices funcionales exportadas por ClueGO.
-- `resultados/control_calidad/MultiQC/`: informes MultiQC, separados en `PreFastP` y `PostFastP`.
-- `graficos/deseq2/`: gráficos PCA, volcano, heatmap e intersecciones del análisis DESeq2.
-- `graficos/ClueGO/<región>/`: figuras PNG y SVG exportadas por ClueGO.
-- `graficos/redes_funcionales/`: redes funcionales generales.
-- `graficos/exploracion_sensores/`: figuras que genera el notebook de sensores.
+- `resultados/control_calidad/MultiQC/`: informes MultiQC de referencia, separados en `PreFastP` y `PostFastP`.
+- `resultados/graficos/`: gráficos DESeq2, figuras ClueGO, redes funcionales y gráficos de exploración de sensores.
 
 ## Ejecución del código
 
@@ -40,8 +33,8 @@ Rscript codigo/scripts/Análisis_Transcriptomico.R
 Rscript codigo/scripts/Diagramas_Venn.R
 ```
 
-Antes de ejecutar `Análisis_Transcriptomico.R`, ajusta `select_regions` y `select_seasons` según el contraste: una región y dos estaciones para comparar estaciones, o dos regiones y una estación para comparar regiones. El orden indicado define el orden de la comparación. Las tablas de DESeq2 se guardan en `resultados/DEGs/deseq2/` y sus gráficos en `graficos/deseq2/`.
+Antes de ejecutar `Análisis_Transcriptomico.R`, ajusta `select_regions` y `select_seasons` según el contraste: una región y dos estaciones para comparar estaciones, o dos regiones y una estación para comparar regiones. El orden indicado define el orden de la comparación. Proporciona las matrices `counts_Aysen.txt` y `counts_Magallanes.txt` externamente en la carpeta `datos/featurecounts/` (excluida de Git) o define la variable `FEATURECOUNTS_DIR` con la ruta a esa carpeta. Las tablas de DESeq2 y sus gráficos se guardan en `resultados/DEGs/deseq2/` y `resultados/graficos/deseq2/`, respectivamente.
 
 `Diagramas_Venn.R` procesa las tablas ubicadas en `resultados/DEGs/originales/` y guarda los resultados en `resultados/DEGs/venn/`.
 
-Para `exploracion_sensores.ipynb`, abre el notebook en Jupyter o VS Code y ejecuta las celdas en orden. Requiere el archivo `dataset_sensores/Stats_Extraidos.xlsx`, que no está incluido en el repositorio.
+Para `exploracion_sensores.ipynb`, abre el notebook en Jupyter o VS Code y ejecuta las celdas en orden. Requiere un archivo Excel de sensores externo, indicado en `SENSOR_DATASET_PATH` o en la ruta `dataset_sensores/Stats_Extraidos.xlsx`. Sus gráficos se guardan en `resultados/graficos/exploracion_sensores/`.

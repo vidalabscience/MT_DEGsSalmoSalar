@@ -7,12 +7,13 @@ if (length(script_arg) > 0) {
   setwd(normalizePath(file.path(dirname(script_path), "..", "..")))
 }
 
-if (!dir.exists(file.path("datos", "featurecounts"))) {
-  stop("Ejecute este script desde la raíz del repositorio.")
+input_directory <- Sys.getenv("FEATURECOUNTS_DIR", unset = file.path("datos", "featurecounts"))
+if (!dir.exists(input_directory)) {
+  stop("Configure FEATURECOUNTS_DIR con la carpeta de matrices FeatureCounts.")
 }
 
 output_directory <- file.path("resultados", "DEGs", "deseq2")
-graphics_directory <- file.path("graficos", "deseq2")
+graphics_directory <- file.path("resultados", "graficos", "deseq2")
 
 dir.create(output_directory, recursive = TRUE, showWarnings = FALSE)
 dir.create(graphics_directory, recursive = TRUE, showWarnings = FALSE)
@@ -30,8 +31,8 @@ if (length(select_seasons) == 2 & length(select_regions) == 1) {
   stop("Aplique bien el formato: 2 regiones o 2 estaciones.")
 }
 
-aysen <- read.table(file.path("datos", "featurecounts", "counts_Aysen.txt"), header=TRUE, row.names=1, check.names=FALSE)
-magallanes <- read.table(file.path("datos", "featurecounts", "counts_Magallanes.txt"), header=TRUE, row.names=1, check.names=FALSE)
+aysen <- read.table(file.path(input_directory, "counts_Aysen.txt"), header=TRUE, row.names=1, check.names=FALSE)
+magallanes <- read.table(file.path(input_directory, "counts_Magallanes.txt"), header=TRUE, row.names=1, check.names=FALSE)
 
 aysen_clean <- aysen[, 6:ncol(aysen)]
 magallanes_clean <- magallanes[, 6:ncol(magallanes)]
